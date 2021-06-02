@@ -28,28 +28,27 @@ class TestMC(unittest.TestCase):
             pi = monte_carlo(i)
             self.assertTrue(abs(pi - math.pi) < 0.4, msg=f"Estimate with even {i} iterations is {pi} which is not accurate enough.\n")
      
-    
-   # wallis function
-   def wallis(n) : 
-      p=1
-      for i in range(1,n) :
-          p= p * (4*i*i/(4*i*i-1))
-      P = 2* p
-      return P
-   
-    
-   #monte_carlo
-   
-   def monte_carlo(n):
-       num = 0
-       den = 0
-       for i in range (1,n):
-           x = random.uniform(-1,1)
-           y = random.uniform(-1,1)
-           if(x*x + y*y <=1):
-               num = num+1
-           den = den+1
-       return 4*num/den
+# wallis function
+def wallis(n) : 
+  p=1
+  for i in range(1,n) :
+      p= p * (4*i*i/(4*i*i-1))
+  P = 2* p
+  return P
+
+
+#monte_carlo
+
+def monte_carlo(n):
+   num = 0
+   den = 0
+   for i in range (1,n):
+       x = random.uniform(-1,1)
+       y = random.uniform(-1,1)
+       if(x*x + y*y <=1):
+           num = num+1
+       den = den+1
+   return 4*num/den
     
     
 if __name__ == "__main__":
