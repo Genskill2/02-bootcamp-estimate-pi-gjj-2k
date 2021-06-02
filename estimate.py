@@ -1,5 +1,6 @@
 import math
 import unittest
+import random
 
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
@@ -38,7 +39,7 @@ class TestMC(unittest.TestCase):
    
     
    #monte_carlo
-   import random
+   
    def monte_carlo(n):
        num = 0
        den = 0
