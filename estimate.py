@@ -40,14 +40,14 @@ class TestMC(unittest.TestCase):
    #monte_carlo
    import random
    def monte_carlo(n):
-       n = 0
-       d = 0
+       num = 0
+       den = 0
        for i in range (1,n):
            x = random.uniform(-1,1)
            y = random.uniform(-1,1)
            if(x*x + y*y <=1):
-               n = n+1
-           d = d+1
+               num = num+1
+           den = den+1
        return 4*num/den
     
     
